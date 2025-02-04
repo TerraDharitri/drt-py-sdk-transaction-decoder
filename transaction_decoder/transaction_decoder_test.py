@@ -69,7 +69,7 @@ class TestTransactionDecoder:
             == ['0173d0']
         )
 
-    def test_multi_esdt_nft_transfer(self):
+    def test_multi_dcdt_nft_transfer(self):
         tx_to_decode = TransactionToDecode()
         tx_to_decode.sender = (
             "drt1qqqqqqqqqqqqqpgqmua7hcd05yxypyj7sv7pffrquy9gf86s535qmyujkw"
@@ -112,7 +112,7 @@ class TestTransactionDecoder:
                     metadata.transfers[1].properties.identifier == "LKMOA-aab910-3102ca"
                 )
 
-    def test_esdt_transfer(self):
+    def test_dcdt_transfer(self):
         tx_to_decode = TransactionToDecode()
 
         tx_to_decode.sender = (
@@ -145,7 +145,7 @@ class TestTransactionDecoder:
                 assert metadata.transfers[0].properties.collection == "TEST-2e40d7"
                 assert metadata.transfers[0].properties.identifier == "TEST-2e40d7"
     
-    def test_multi_transfer_fungible_and_meta_esdt(self):
+    def test_multi_transfer_fungible_and_meta_dcdt(self):
         tx_to_decode = TransactionToDecode()
 
         tx_to_decode.sender = (
@@ -185,7 +185,7 @@ class TestTransactionDecoder:
             if metadata.transfers[1].properties:
                 assert metadata.transfers[1].properties.token == "USDC-350c4e"
 
-    def test_multi_transfer_fungible_esdt(self):
+    def test_multi_transfer_fungible_dcdt(self):
         tx_to_decode = TransactionToDecode()
 
         tx_to_decode.sender = (
