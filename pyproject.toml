@@ -26,7 +26,7 @@ dependencies = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/dharitri/drt-sdk-py-transaction-decoder"
+"Homepage" = "https://github.com/TerraDharitri/drt-py-sdk-transaction-decoder"
 
 [tool.hatch.build.targets.wheel]
 packages = ["transaction_decoder"]
